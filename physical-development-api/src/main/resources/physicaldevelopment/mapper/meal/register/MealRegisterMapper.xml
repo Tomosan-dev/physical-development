@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="physicaldevelopment.datasource.mapper.meal.register.MealRegisterMapper">
+
+	<select id="insertMeal" parameterType="physicaldevelopment.model.meal.Meal">
+		INSERT INTO nutrition.meal (
+			meal_id,
+			daily_nutrient_amount_id,
+			order_of_meals,
+			meal_name,
+			input_type,
+			created_at,
+			updated_at
+		) VALUES (
+			#{meal.mealId.mealId},
+			#{dailyNutrientAmountId},
+			#{meal.orderOfMeals.orderOfMeals},
+			#{meal.mealName.mealName},
+			#{meal.inputType.name},
+			now(),
+			now()
+		)
+	</select>
+
+	<select id="insertEnergyMealManual" parameterType="physicaldevelopment.model.meal.Meal">
+		INSERT INTO nutrition.manual_entry_of_nutrients (
+			manual_entry_of_nutrients_id,
+			meal_id,
+			nutrition_type,
+			nutrition_amount,
+			created_at,
+			updated_at
+		) VALUES (
+			#{manualEntryOfNutrientsId},
+			#{meal.mealId.mealId},
+			#{energyNutrientAmount.nutrition.name},
+			#{energyNutrientAmount.nutrientAmount},
+			now(),
+			now()
+		)
+	</select>
+	<select id="insertProteinMealManual" parameterType="physicaldevelopment.model.meal.Meal">
+		INSERT INTO nutrition.manual_entry_of_nutrients (
+			manual_entry_of_nutrients_id,
+			meal_id,
+			nutrition_type,
+			nutrition_amount,
+			created_at,
+			updated_at
+		) VALUES (
+			#{manualEntryOfNutrientsId},
+			#{meal.mealId.mealId},
+			#{proteinNutrientAmount.nutrition.name},
+			#{proteinNutrientAmount.nutrientAmount},
+			now(),
+			now()
+		)
+	</select>
+	<select id="insertLipidMealManual" parameterType="physicaldevelopment.model.meal.Meal">
+		INSERT INTO nutrition.manual_entry_of_nutrients (
+			manual_entry_of_nutrients_id,
+			meal_id,
+			nutrition_type,
+			nutrition_amount,
+			created_at,
+			updated_at
+		) VALUES (
+			#{manualEntryOfNutrientsId},
+			#{meal.mealId.mealId},
+			#{lipidNutrientAmount.nutrition.name},
+			#{lipidNutrientAmount.nutrientAmount},
+			now(),
+			now()
+		)
+	</select>
+	<select id="insertCarbohydrateMealManual" parameterType="physicaldevelopment.model.meal.Meal">
+		INSERT INTO nutrition.manual_entry_of_nutrients (
+			manual_entry_of_nutrients_id,
+			meal_id,
+			nutrition_type,
+			nutrition_amount,
+			created_at,
+			updated_at
+		) VALUES (
+			#{manualEntryOfNutrientsId},
+			#{meal.mealId.mealId},
+			#{carbohydrateNutrientAmount.nutrition.name},
+			#{carbohydrateNutrientAmount.nutrientAmount},
+			now(),
+			now()
+		)
+	</select>
+
+	<select id="selectNextMealId" resultType="Integer">
+		SELECT nextval('nutrition.meal_meal_id_SEQ')
+	</select>
+
+	<select id="selectNextManualEntryOfNutrientsId" resultType="Integer">
+		SELECT nextval('nutrition.manual_entry_of_nutrients_manual_entry_of_nutrients_id_SEQ')
+	</select>
+
+	<select id="selectDailyNutrientAmountId" parameterType="physicaldevelopment.model.primitive.YearMonthDay" resultType="Integer">
+		SELECT
+			daily_nutrient_amount_id
+		FROM
+			nutrition.daily_nutrient_amount
+		WHERE
+			account_id = #{accountId.accountId}
+		AND
+			year_month_day = #{yearMonthDay.yearMonthDay}
+	</select>
+
+	<select id="selectMaxOrderOfMeals" resultType="Integer">
+		SELECT
+			max(order_of_meals)
+		FROM
+			nutrition.meal
+		WHERE
+			daily_nutrient_amount_id = #{dailyNutrientAmountId.dailyNutrientAmountId}
+	</select>
+
+
+</mapper>

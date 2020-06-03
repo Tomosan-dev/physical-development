@@ -1,0 +1,79 @@
+@CHARSET "UTF-8";
+
+.error-message {
+	color: #F00;
+}
+
+.account-register-h2 {
+	font-size: 30px;
+	padding: 100px 0 50px 0;
+}
+
+.member-register-table-data-title {
+	width: 150px;
+	font-weight: bold;
+	font-size: 18px;
+/*	padding-right: 250px;*/
+	padding-left: 50px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.member-register-table {
+	width: 800px;
+	margin: auto;
+}
+
+/*.member-register-table-button {
+	display: flex;
+	justify-content: space-between;
+}*/
+
+.member-register-table-data-button {
+	border-radius: 5px;
+	padding: 8px 16px;
+	font-size: 18px;
+	font-weight: bold;
+	margin-top: 50px;
+	margin-right: 100px;
+/*	cursor: pointer;*/
+}
+
+.buttom-wrap {
+	margin: 50px 200px;
+}
+
+.member-register-button {
+	border-radius: 5px;
+	padding: 8px 16px;
+	font-size: 18px;
+	font-weight: bold;
+	margin-left: 120px;
+}
+.member-register-back-button {
+	border-radius: 5px;
+	padding: 8px 16px;
+	font-size: 18px;
+	font-weight: bold;
+	margin-right: 50px;
+}
+
+.member-register-table-data-title-transition {
+	text-align:left;
+	padding-left: 0;
+	margin-left: 100px;
+	margin-top: 50px;
+	display: inline-block;
+}
+
+.member-register-table-input-text {
+	box-shadow: none;
+	border-radius: 10px;
+	padding: 8px 35px;
+}
+
+.member-register-table-data-input-select {
+	border-radius: 5px;
+	padding: 2px 8px;
+	font-size: 16px;
+	margin: 0 10px;

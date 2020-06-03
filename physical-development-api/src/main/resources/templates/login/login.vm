@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet"  type="text/css"  href="/PhysicalDevelopment/resouces/css/style.css">
+<link rel="stylesheet"  type="text/css"  href="/PhysicalDevelopment/resouces/css/loginlogout/login.css">
+<title>ログイン</title>
+</head>
+<body>
+
+	#include("primitive/before_login_header.vm")
+
+	<div class="main-contents">
+		<h2 class="login-page-title">
+			<img class="login-logo-img" src="/PhysicalDevelopment/resouces/photo/身体開発.JPG">
+		</h2>
+
+		<form class="login-form" action="/PhysicalDevelopment/authentication" method="post">
+			<table class="student-list-table">
+				<tr>
+					<td class="login-input-title">ID</td>
+					<td><input type="text" id="loginId" name="loginId" class="login-input-text"></td>
+				</tr>
+				<tr>
+					<td class="login-input-title">パスワード</td>
+					<td><input type="password" id="password" name="password" class="login-input-text"></td>
+				</tr>
+				<tr>
+					<td class="login-table-data-title login-table-data-title-transition"><p class="nav-link"><a href="http://localhost:8080/PhysicalDevelopment/accountRegister" class="a-link-text">会員登録へ</a></p></td>
+					<td class="login-table-data-button"><input type="submit" value="ログイン" class="student-register-button"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

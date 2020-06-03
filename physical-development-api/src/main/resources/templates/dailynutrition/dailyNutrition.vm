@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script language="javascript" type="text/javascript" src="/PhysicalDevelopment/resouces/jquery/jquery.jqplot.min.js"></script>
+<script language="javascript" type="text/javascript" src="/PhysicalDevelopment/resouces/jquery/plugins/jqplot.barRenderer.js"></script>
+<script language="javascript" type="text/javascript" src="/PhysicalDevelopment/resouces/jquery/plugins/jqplot.categoryAxisRenderer.js"></script>
+<link rel="stylesheet" type="text/css" href="/PhysicalDevelopment/resouces/jquery/jquery.jqplot.min.css" />
+<link rel="stylesheet"  type="text/css"  href="/PhysicalDevelopment/resouces/css/style.css">
+<link rel="stylesheet"  type="text/css"  href="/PhysicalDevelopment/resouces/css/dailynutrition/daily_nutrition.css">
+<title>ログイン</title>
+</head>
+<body>
+
+	#include("primitive/after_login_header.vm")
+
+<script>
+var energy_target,protein_target,lipid_target,carbohydrate_target,energy_today,protein_today,lipid_today,carbohydrate_today,energy_remaining,protein_remaining,lipid_remaining,carbohydrate_remaining,target;
+energy_target = ${dailyNutrition.targetNutrition.energyTargetNutrientAmount.nutrientAmount.nutrientAmount};
+protein_target = ${dailyNutrition.targetNutrition.proteinTargetNutrientAmount.nutrientAmount.nutrientAmount};
+lipid_target = ${dailyNutrition.targetNutrition.lipidTargetNutrientAmount.nutrientAmount.nutrientAmount};
+carbohydrate_target = ${dailyNutrition.targetNutrition.carbohydrateTargetNutrientAmount.nutrientAmount.nutrientAmount};
+
+energy_today = ${dailyNutrition.totalNutrientAmountPerDay.energyNutrientAmount.nutrientAmount};
+protein_today = ${dailyNutrition.totalNutrientAmountPerDay.proteinNutrientAmount.nutrientAmount};
+lipid_today = ${dailyNutrition.totalNutrientAmountPerDay.lipidNutrientAmount.nutrientAmount};
+carbohydrate_today = ${dailyNutrition.totalNutrientAmountPerDay.carbohydrateNutrientAmount.nutrientAmount};
+
+energy_remaining = energy_target - energy_today;
+protein_remaining = protein_target - protein_today;
+lipid_remaining = lipid_target - lipid_today;
+carbohydrate_remaining = carbohydrate_target - carbohydrate_today;
+</script>
+
+	<div class="daily-nutrition-title-wrap">
+		<h2 class="page-title">
+			${yearMonthDay}の摂取栄養素
+		</h2>
+		<div class="daily-links">
+			<p class="daily-nutrition-link">
+				<a class="" href="/PhysicalDevelopment/">食事一覧</a>
+			</p>
+			<p class="daily-nutrition-link">
+				<a class="" href="/PhysicalDevelopment/targetNutrition">目標設定</a>
+			</p>
+			<p class="daily-nutrition-link">
+				<a class="" href="/PhysicalDevelopment/">1ヵ月の評価</a>
+			</p>
+		</div>
+	</div>
+	<div class="daily-information">
+		<script>
+			var notSubjectToEvaluation = ${evaluation.notSubjectToEvaluation.notSubjectToEvaluation}
+		</script>
+		<div id="evaluation">
+			#parse("dailynutrition/evaluation.vm")
+		</div>
+		<div class="daily-nutrition-information-wrap">
+				<p>
+					<span class="daily-nutrition-table-data-title">目標</span>
+					<span class="daily-nutrition-table-data-content">
+						エネルギー: <span id="energy_target"></span>kcal
+					</span>
+					<span class="daily-nutrition-table-data-content">
+						たんぱく質: <span id="protein_target"></span>g
+					</span>
+					<span class="daily-nutrition-table-data-content">
+						脂質: <span id="lipid_target"></span>g
+					</span>
+					<span class="daily-nutrition-table-data-content">
+						炭水化物: <span id="carbohydrate_target"></span>g
+					</span>
+				</p>
+				<p>
+					<span class="daily-nutrition-table-data-title">本日</span>
+					<span class="daily-nutrition-table-data-content">
+						エネルギー: <span id="energy_today"></span>kcal
+					</span>
+					<span class="daily-nutrition-table-data-content">
+						たんぱく質: <span id="protein_today"></span>g
+					</span>
+					<span class="daily-nutrition-table-data-content">
+						脂質: <span id="lipid_today"></span>g
+					</span>
+					<span class="daily-nutrition-table-data-content">
+						炭水化物: <span id="carbohydrate_today"></span>g
+					</span>
+				</p>
+				<hr>
+				<p>
+					<span class="daily-nutrition-table-data-title">残り</span>
+					<span class="daily-nutrition-table-data-content">
+						エネルギー: <span id="energy_remaining"></span>kcal
+					</tdspan
+					<span class="daily-nutrition-table-data-content">
+						たんぱく質: <span id="protein_remaining"></span>g
+					</span>
+					<span class="daily-nutrition-table-data-content">
+						脂質: <span id="lipid_remaining"></span>g
+					</span>
+					<span class="daily-nutrition-table-data-content">
+						炭水化物: <span id="carbohydrate_remaining"></span>g
+					</span>
+				</p>
+			</div>
+
+	</div>
+
+	<div id="output">
+	</div>
+
+
+<script type="text/javascript" src="/PhysicalDevelopment/resouces/javascript/dailynutrition/table_mapping.js">
+</script>
+
+	<div id="jqPlot-sample" class="daily-nutrition-graph">
+	</div>
+
+<script>
+energy_percent = energy_today / energy_target * 100;
+protein_percent =  protein_today / protein_target * 100;
+lipid_percent = lipid_today / lipid_target * 100;
+carbohydrate_percent = carbohydrate_today / carbohydrate_target * 100;
+</script>
+
+#parse("dailynutrition/notSubjectToEvaluation.vm")評価対象外にする
+
+<script type="text/javascript" src="/PhysicalDevelopment/resouces/javascript/dailynutrition/daily_nutrition.js">
+</script>
+
+</body>
+</html>
