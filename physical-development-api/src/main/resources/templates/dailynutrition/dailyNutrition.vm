@@ -3,13 +3,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script language="javascript" type="text/javascript" src="/PhysicalDevelopment/resouces/jquery/jquery.jqplot.min.js"></script>
-<script language="javascript" type="text/javascript" src="/PhysicalDevelopment/resouces/jquery/plugins/jqplot.barRenderer.js"></script>
-<script language="javascript" type="text/javascript" src="/PhysicalDevelopment/resouces/jquery/plugins/jqplot.categoryAxisRenderer.js"></script>
-<link rel="stylesheet" type="text/css" href="/PhysicalDevelopment/resouces/jquery/jquery.jqplot.min.css" />
-<link rel="stylesheet"  type="text/css"  href="/PhysicalDevelopment/resouces/css/style.css">
-<link rel="stylesheet"  type="text/css"  href="/PhysicalDevelopment/resouces/css/dailynutrition/daily_nutrition.css">
-<title>ログイン</title>
+<script language="javascript" type="text/javascript" src="/resouces/jquery/jquery.jqplot.min.js"></script>
+<script language="javascript" type="text/javascript" src="/resouces/jquery/plugins/jqplot.barRenderer.js"></script>
+<script language="javascript" type="text/javascript" src="/resouces/jquery/plugins/jqplot.categoryAxisRenderer.js"></script>
+<link rel="stylesheet" type="text/css" href="/resouces/jquery/jquery.jqplot.min.css" />
+<link rel="stylesheet"  type="text/css"  href="/resouces/css/style.css">
+<link rel="stylesheet"  type="text/css"  href="/resouces/css/dailynutrition/daily_nutrition.css">
+<title>繝ｭ繧ｰ繧､繝ｳ</title>
 </head>
 <body>
 
@@ -35,17 +35,17 @@ carbohydrate_remaining = carbohydrate_target - carbohydrate_today;
 
 	<div class="daily-nutrition-title-wrap">
 		<h2 class="page-title">
-			${yearMonthDay}の摂取栄養素
+			${yearMonthDay}縺ｮ鞫ょ叙譬�鬢顔ｴ�
 		</h2>
 		<div class="daily-links">
 			<p class="daily-nutrition-link">
-				<a class="" href="/PhysicalDevelopment/">食事一覧</a>
+				<a class="" href="/">鬟滉ｺ倶ｸ�隕ｧ</a>
 			</p>
 			<p class="daily-nutrition-link">
-				<a class="" href="/PhysicalDevelopment/targetNutrition">目標設定</a>
+				<a class="" href="/targetNutrition">逶ｮ讓呵ｨｭ螳�</a>
 			</p>
 			<p class="daily-nutrition-link">
-				<a class="" href="/PhysicalDevelopment/">1ヵ月の評価</a>
+				<a class="" href="/">1繝ｵ譛医�ｮ隧穂ｾ｡</a>
 			</p>
 		</div>
 	</div>
@@ -58,49 +58,49 @@ carbohydrate_remaining = carbohydrate_target - carbohydrate_today;
 		</div>
 		<div class="daily-nutrition-information-wrap">
 				<p>
-					<span class="daily-nutrition-table-data-title">目標</span>
+					<span class="daily-nutrition-table-data-title">逶ｮ讓�</span>
 					<span class="daily-nutrition-table-data-content">
-						エネルギー: <span id="energy_target"></span>kcal
+						繧ｨ繝阪Ν繧ｮ繝ｼ: <span id="energy_target"></span>kcal
 					</span>
 					<span class="daily-nutrition-table-data-content">
-						たんぱく質: <span id="protein_target"></span>g
+						縺溘ｓ縺ｱ縺剰ｳｪ: <span id="protein_target"></span>g
 					</span>
 					<span class="daily-nutrition-table-data-content">
-						脂質: <span id="lipid_target"></span>g
+						閼りｳｪ: <span id="lipid_target"></span>g
 					</span>
 					<span class="daily-nutrition-table-data-content">
-						炭水化物: <span id="carbohydrate_target"></span>g
+						轤ｭ豌ｴ蛹也黄: <span id="carbohydrate_target"></span>g
 					</span>
 				</p>
 				<p>
-					<span class="daily-nutrition-table-data-title">本日</span>
+					<span class="daily-nutrition-table-data-title">譛ｬ譌･</span>
 					<span class="daily-nutrition-table-data-content">
-						エネルギー: <span id="energy_today"></span>kcal
+						繧ｨ繝阪Ν繧ｮ繝ｼ: <span id="energy_today"></span>kcal
 					</span>
 					<span class="daily-nutrition-table-data-content">
-						たんぱく質: <span id="protein_today"></span>g
+						縺溘ｓ縺ｱ縺剰ｳｪ: <span id="protein_today"></span>g
 					</span>
 					<span class="daily-nutrition-table-data-content">
-						脂質: <span id="lipid_today"></span>g
+						閼りｳｪ: <span id="lipid_today"></span>g
 					</span>
 					<span class="daily-nutrition-table-data-content">
-						炭水化物: <span id="carbohydrate_today"></span>g
+						轤ｭ豌ｴ蛹也黄: <span id="carbohydrate_today"></span>g
 					</span>
 				</p>
 				<hr>
 				<p>
-					<span class="daily-nutrition-table-data-title">残り</span>
+					<span class="daily-nutrition-table-data-title">谿九ｊ</span>
 					<span class="daily-nutrition-table-data-content">
-						エネルギー: <span id="energy_remaining"></span>kcal
+						繧ｨ繝阪Ν繧ｮ繝ｼ: <span id="energy_remaining"></span>kcal
 					</tdspan
 					<span class="daily-nutrition-table-data-content">
-						たんぱく質: <span id="protein_remaining"></span>g
+						縺溘ｓ縺ｱ縺剰ｳｪ: <span id="protein_remaining"></span>g
 					</span>
 					<span class="daily-nutrition-table-data-content">
-						脂質: <span id="lipid_remaining"></span>g
+						閼りｳｪ: <span id="lipid_remaining"></span>g
 					</span>
 					<span class="daily-nutrition-table-data-content">
-						炭水化物: <span id="carbohydrate_remaining"></span>g
+						轤ｭ豌ｴ蛹也黄: <span id="carbohydrate_remaining"></span>g
 					</span>
 				</p>
 			</div>
@@ -111,7 +111,7 @@ carbohydrate_remaining = carbohydrate_target - carbohydrate_today;
 	</div>
 
 
-<script type="text/javascript" src="/PhysicalDevelopment/resouces/javascript/dailynutrition/table_mapping.js">
+<script type="text/javascript" src="/resouces/javascript/dailynutrition/table_mapping.js">
 </script>
 
 	<div id="jqPlot-sample" class="daily-nutrition-graph">
@@ -124,9 +124,9 @@ lipid_percent = lipid_today / lipid_target * 100;
 carbohydrate_percent = carbohydrate_today / carbohydrate_target * 100;
 </script>
 
-#parse("dailynutrition/notSubjectToEvaluation.vm")評価対象外にする
+#parse("dailynutrition/notSubjectToEvaluation.vm")隧穂ｾ｡蟇ｾ雎｡螟悶↓縺吶ｋ
 
-<script type="text/javascript" src="/PhysicalDevelopment/resouces/javascript/dailynutrition/daily_nutrition.js">
+<script type="text/javascript" src="/resouces/javascript/dailynutrition/daily_nutrition.js">
 </script>
 
 </body>

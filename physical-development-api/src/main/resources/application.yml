@@ -1,5 +1,3 @@
-server:
-  contextPath: /PhysicalDevelopment/
 security: 
   user: 
     name: saito
