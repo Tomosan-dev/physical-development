@@ -10,6 +10,12 @@ buildscript{
 apply plugin: "java"
 apply plugin: "spring-boot"
 apply plugin: "eclipse"
+apply plugin: "war"
+
+war {
+        enabled = true
+        archiveName 'physical-development-api.war'
+    }
 
 //依存関係の記載
 repositories{
