@@ -2,26 +2,26 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet"  type="text/css"  href="/PhysicalDevelopment/resouces/css/style.css">
-<link rel="stylesheet"  type="text/css"  href="/PhysicalDevelopment/resouces/css/account/register/confirm_account_register.css">
+<link rel="stylesheet"  type="text/css"  href="/resouces/css/style.css">
+<link rel="stylesheet"  type="text/css"  href="/resouces/css/account/register/confirm_account_register.css">
 <title>会員登録確認</title>
 </head>
 <body>
 
 	<header class="header">
 			<h1 class="h1">
-				<a class="header-contents-a" href="/PhysicalDevelopment/">
-					<img class="header-logo" src="/PhysicalDevelopment/resouces/photo/身体開発.JPG">
+				<a class="header-contents-a" href="/">
+					<img class="header-logo" src="/resouces/photo/身体開発.JPG">
 				</a>
 			</h1>
 		<div class="header-nav-link">
-			<p class="header-nav-link-text nav-link nomal-font"><a href="/PhysicalDevelopment/login" class="nav-link-text-normal">ログイン</a></p>
+			<p class="header-nav-link-text nav-link nomal-font"><a href="/login" class="nav-link-text-normal">ログイン</a></p>
 		</div>
 	</header>
 
 	<div class="main-contents">
 		<h2 class="h2">会員登録確認</h2>
-		<form class="member-register-form" action="/PhysicalDevelopment/checkedMemberRegister" method="post">
+		<form class="member-register-form" action="/checkedMemberRegister" method="post">
 			<table class="member-register-table">
 				<tr class="member-register-table-line member-register-table-line-top">
 		          <td class="member-register-table-data-title">性別</td>

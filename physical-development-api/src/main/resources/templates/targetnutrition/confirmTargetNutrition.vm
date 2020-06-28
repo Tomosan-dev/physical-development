@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<link rel="stylesheet"  type="text/css"  href="/PhysicalDevelopment/resouces/css/style.css">
-<link rel="stylesheet"  type="text/css"  href="/PhysicalDevelopment/resouces/css/targetnutrition/confirm_target_nutrition.css">
+<link rel="stylesheet"  type="text/css"  href="/resouces/css/style.css">
+<link rel="stylesheet"  type="text/css"  href="/resouces/css/targetnutrition/confirm_target_nutrition.css">
 <title>ログイン</title>
 </head>
 <body>
@@ -12,7 +12,7 @@
 
 	<div class="main-contents">
 		<h2 class="h2">目標設定確認</h2>
-			<form class="student-register-form" action="/PhysicalDevelopment/confirmedTargetNutrition" method="post">
+			<form class="student-register-form" action="/confirmedTargetNutrition" method="post">
 				<table class="target-nutrition-table">
 					<tr class="target-nutrition-table-line target-nutrition-table-line-top">
 						<td class="target-nutrition-table-data-title">エネルギー</td>

@@ -3,12 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<script language="javascript" type="text/javascript" src="/PhysicalDevelopment/resouces/jquery/jquery.jqplot.min.js"></script>
-<script language="javascript" type="text/javascript" src="/PhysicalDevelopment/resouces/jquery/plugins/jqplot.barRenderer.js"></script>
-<script language="javascript" type="text/javascript" src="/PhysicalDevelopment/resouces/jquery/plugins/jqplot.categoryAxisRenderer.js"></script>
-<link rel="stylesheet" type="text/css" href="/PhysicalDevelopment/resouces/jquery/jquery.jqplot.min.css" />
-<link rel="stylesheet"  type="text/css"  href="/PhysicalDevelopment/resouces/css/style.css">
-<link rel="stylesheet"  type="text/css"  href="/PhysicalDevelopment/resouces/css/dailynutrition/daily_nutrition.css">
+<script language="javascript" type="text/javascript" src="/resouces/jquery/jquery.jqplot.min.js"></script>
+<script language="javascript" type="text/javascript" src="/resouces/jquery/plugins/jqplot.barRenderer.js"></script>
+<script language="javascript" type="text/javascript" src="/resouces/jquery/plugins/jqplot.categoryAxisRenderer.js"></script>
+<link rel="stylesheet" type="text/css" href="/resouces/jquery/jquery.jqplot.min.css" />
+<link rel="stylesheet"  type="text/css"  href="/resouces/css/style.css">
+<link rel="stylesheet"  type="text/css"  href="/resouces/css/dailynutrition/daily_nutrition.css">
 <title>ログイン</title>
 </head>
 <body>
@@ -39,13 +39,13 @@ carbohydrate_remaining = carbohydrate_target - carbohydrate_today;
 		</h2>
 		<div class="daily-links">
 			<p class="daily-nutrition-link">
-				<a class="" href="/PhysicalDevelopment/">食事一覧</a>
+				<a class="" href="/">食事一覧</a>
 			</p>
 			<p class="daily-nutrition-link">
-				<a class="" href="/PhysicalDevelopment/targetNutrition">目標設定</a>
+				<a class="" href="/targetNutrition">目標設定</a>
 			</p>
 			<p class="daily-nutrition-link">
-				<a class="" href="/PhysicalDevelopment/">1ヵ月の評価</a>
+				<a class="" href="/">1ヵ月の評価</a>
 			</p>
 		</div>
 	</div>
@@ -111,7 +111,7 @@ carbohydrate_remaining = carbohydrate_target - carbohydrate_today;
 	</div>
 
 
-<script type="text/javascript" src="/PhysicalDevelopment/resouces/javascript/dailynutrition/table_mapping.js">
+<script type="text/javascript" src="/resouces/javascript/dailynutrition/table_mapping.js">
 </script>
 
 	<div id="jqPlot-sample" class="daily-nutrition-graph">
@@ -126,7 +126,7 @@ carbohydrate_percent = carbohydrate_today / carbohydrate_target * 100;
 
 #parse("dailynutrition/notSubjectToEvaluation.vm")評価対象外にする
 
-<script type="text/javascript" src="/PhysicalDevelopment/resouces/javascript/dailynutrition/daily_nutrition.js">
+<script type="text/javascript" src="/resouces/javascript/dailynutrition/daily_nutrition.js">
 </script>
 
 </body>

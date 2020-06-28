@@ -2,8 +2,8 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<link rel="stylesheet"  type="text/css"  href="/PhysicalDevelopment/resouces/css/style.css">
-<link rel="stylesheet"  type="text/css"  href="/PhysicalDevelopment/resouces/css/nutrition/register/nutrition_register.css">
+<link rel="stylesheet"  type="text/css"  href="/resouces/css/style.css">
+<link rel="stylesheet"  type="text/css"  href="/resouces/css/nutrition/register/nutrition_register.css">
 <title>ログイン</title>
 </head>
 <body>
@@ -13,7 +13,7 @@
 	<div class="main-contents">
 		<div class="nutrition-register-title-wrap">
 			<h2 class="h2">食事登録</h2>
-			<form class="nutrition-register-form" action="/PhysicalDevelopment/confirmNutritionRegister" method="post">
+			<form class="nutrition-register-form" action="/confirmNutritionRegister" method="post">
 
 <script>
 

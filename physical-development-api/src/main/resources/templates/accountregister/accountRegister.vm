@@ -2,25 +2,25 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<link rel="stylesheet"  type="text/css"  href="/PhysicalDevelopment/resouces/css/style.css">
-<link rel="stylesheet"  type="text/css"  href="/PhysicalDevelopment/resouces/css/account/register/account_register.css">
-<title>会員登録</title>
+<link rel="stylesheet"  type="text/css"  href="/resouces/css/style.css">
+<link rel="stylesheet"  type="text/css"  href="/resouces/css/account/register/account_register.css">
+<title>莨壼藤逋ｻ骭ｲ</title>
 </head>
 <body>
 
 	<header class="header">
 			<h1 class="h1">
-				<a class="header-contents-a" href="/PhysicalDevelopment/">
-					<img class="header-logo" src="/PhysicalDevelopment/resouces/photo/身体開発.JPG">
+				<a class="header-contents-a" href="/">
+					<img class="header-logo" src="/resouces/photo/霄ｫ菴馴幕逋ｺ.JPG">
 				</a>
 			</h1>
 		<div class="header-nav-link">
-			<p class="header-nav-link-text nav-link nomal-font"><a href="/PhysicalDevelopment/login" class="nav-link-text-normal">ログイン</a></p>
+			<p class="header-nav-link-text nav-link nomal-font"><a href="/login" class="nav-link-text-normal">繝ｭ繧ｰ繧､繝ｳ</a></p>
 		</div>
 	</header>
 
 	<div class="main-contents">
-		<h2 class="account-register-h2">会員登録</h2>
+		<h2 class="account-register-h2">莨壼藤逋ｻ骭ｲ</h2>
 
 		<div class="error-message" id="messages">
 		</div>
@@ -28,31 +28,31 @@
 <script>
 var defaultMessages = "", fields = "";
 	#foreach($error in $errors)
-		defaultMessages += "<p>" + "※" + "$error.defaultMessage" + "</p>";
+		defaultMessages += "<p>" + "窶ｻ" + "$error.defaultMessage" + "</p>";
 	#end
 	document.getElementById("messages").innerHTML = defaultMessages;
 </script>
 
-		<form class="member-register-form" action="/PhysicalDevelopment/newMemberRegister" method="post">
+		<form class="member-register-form" action="/newMemberRegister" method="post">
 			<table class="member-register-table">
 		        <tr class="member-register-table-line">
-		          <td class="member-register-table-data-title">性別</td>
+		          <td class="member-register-table-data-title">諤ｧ蛻･</td>
 		          <td class="member-register-table-data-content">
 		            <select name="stringSex" class="member-register-table-data-input-select">
-		              <option value="MAN">男性</option>
-		              <option value="WOMAN">女性</option>
+		              <option value="MAN">逕ｷ諤ｧ</option>
+		              <option value="WOMAN">螂ｳ諤ｧ</option>
 		            </select>
 		          </td>
 		        </tr>
 		        <tr class="member-register-table-line">
-		          <td class="member-register-table-data-title">生年月日</td>
+		          <td class="member-register-table-data-title">逕溷ｹｴ譛域律</td>
 		          <td class="member-register-table-data-content">
 		            <select name="birthday.year" id="id_year" class="member-register-table-data-input-select">
-		            </select>年
+		            </select>蟷ｴ
 		            <select name="birthday.month" id="id_month" class="member-register-table-data-input-select">
-		            </select>月
+		            </select>譛�
 		            <select name="birthday.day" id="id_day" class="member-register-table-data-input-select">
-		            </select>日
+		            </select>譌･
 		          </td>
 		        </tr>
 				<tr class="member-register-table-line">
@@ -62,7 +62,7 @@ var defaultMessages = "", fields = "";
 					</td>
 				</tr>
 				<tr class="member-register-table-line">
-					<td class="member-register-table-data-title">パスワード</td>
+					<td class="member-register-table-data-title">繝代せ繝ｯ繝ｼ繝�</td>
 					<td class="member-register-table-data-content">
 						<input type="password" id="password" name="authentication.password.password" class="member-register-table-input-text">
 					</td>
@@ -71,10 +71,10 @@ var defaultMessages = "", fields = "";
 					<div class="buttom-wrap">
 <!--				<tr class="member-register-table-line member-register-table-button"> -->
 <!--					<td class="member-register-table-data-title"> -->
-						<button class="member-register-back-button" type="button" onclick="history.back()">戻る</button>
+						<button class="member-register-back-button" type="button" onclick="history.back()">謌ｻ繧�</button>
 <!--					</td>-->
 <!--					<td class="member-register-table-data-content member-register-table-data-button"> -->
-						<button class="member-register-button">会員登録</button>
+						<button class="member-register-button">莨壼藤逋ｻ骭ｲ</button>
 <!--					</td> -->
 <!--				</tr> -->
 					</div>
@@ -86,7 +86,7 @@ var defaultMessages = "", fields = "";
   'use strict';
 
   /*
-    今日の日付データを変数todayに格納
+    莉頑律縺ｮ譌･莉倥ョ繝ｼ繧ｿ繧貞､画焚today縺ｫ譬ｼ邏�
    */
   var optionLoop, this_day, this_month, this_year, today;
   today = new Date();
@@ -95,7 +95,7 @@ var defaultMessages = "", fields = "";
   this_day = today.getDate();
 
   /*
-    ループ処理（スタート数字、終了数字、表示id名、デフォルト数字）
+    繝ｫ繝ｼ繝怜�ｦ逅��ｼ医せ繧ｿ繝ｼ繝域焚蟄励�∫ｵゆｺ�謨ｰ蟄励�∬｡ｨ遉ｺid蜷阪�√ョ繝輔か繝ｫ繝域焚蟄暦ｼ�
    */
   optionLoop = function(start, end, id, this_day) {
     var i, opt;
@@ -112,7 +112,7 @@ var defaultMessages = "", fields = "";
   };
 
   /*
-    関数設定（スタート数字[必須]、終了数字[必須]、表示id名[省略可能]、デフォルト数字[省略可能]）
+    髢｢謨ｰ險ｭ螳夲ｼ医せ繧ｿ繝ｼ繝域焚蟄夕蠢�鬆�]縲∫ｵゆｺ�謨ｰ蟄夕蠢�鬆�]縲∬｡ｨ遉ｺid蜷梗逵∫払蜿ｯ閭ｽ]縲√ョ繝輔か繝ｫ繝域焚蟄夕逵∫払蜿ｯ閭ｽ]�ｼ�
    */
   optionLoop(1950, this_year, 'id_year', this_year);
   optionLoop(1, 12, 'id_month', this_month);
