@@ -2,7 +2,7 @@ $(function() {
 	$("input[type='checkbox']").change(function() {
 		var check = this.checked;
 		$.ajax({
-			url: "/notSubjectToEvaluation?notSubjectToEvaluation=" + check,
+			url: "/PhysicalDevelopment/notSubjectToEvaluation?notSubjectToEvaluation=" + check,
 			type: "GET",
 			dataType: "html",
 			success: function(data) {
