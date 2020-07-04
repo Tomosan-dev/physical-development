@@ -12,7 +12,7 @@
 
 	<div class="main-contents">
 		<h2 class="login-page-title">
-			<img class="login-logo-img" src="/resouces/photo/身体開発.JPG">
+			<img class="login-logo-img" src="/resouces/photo/logo.JPG">
 		</h2>
 
 		<form class="login-form" action="/authentication" method="post">
